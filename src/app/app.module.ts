@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { ToggleComponent } from './toggle/toggle.component';
 import { UserDetDirective } from './user-det.directive';
+import { DateCountPipe } from './date-count.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserDetailsComponent,
     ToggleComponent,
-    UserDetDirective
+    UserDetDirective,
+    DateCountPipe
   ],
   imports: [
     BrowserModule,
