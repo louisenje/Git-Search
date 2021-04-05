@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../../classes/user'
+import { Repo } from '../../classes/repo'
+import { ServiceRequestService } from '../../service-http/service-request.service'
+
+
 
 @Component({
   selector: 'app-user-details',
@@ -7,9 +12,40 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserDetailsComponent implements OnInit {
 
-  constructor() { }
+  searchUsers = true;
 
-  ngOnInit(): void {
+  user: User;
+  repo: Repo;
+  username: string;
+
+  constructor(private service: ServiceRequestService) { }
+
+  getProfile() {
+    this.service.getUsername(this.username);
+
+    this.service.getUser();
+    this.user = this.service.user;
+
+    this.service.getRepos(this.username);
+    this.repo = this.service.repo;
+    console.log(this.repo);
+  }
+  switchSearch() {
+    this.searchUsers = !this.searchUsers;
+  }
+
+  ngOnInit() {
+    this.service.getUser();
+    this.user = this.service.user;
+
+    this.service.getRepos(this.username);
+    this.repo = this.service.repo;
+    //typed js added to the page
+    const options = {
+      strings: ['Enter your username please.'],
+      
+ };
+ 
   }
 
 }

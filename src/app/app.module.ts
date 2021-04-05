@@ -10,6 +10,12 @@ import { DateCountPipe } from './date-count.pipe';
 import{ ServiceRequestService } from './service-http/service-request.service'
 import { RouterModule,Routes } from '@angular/router';
 
+const routes:Routes =[
+  {path: 'input-name',component:UserDetailsComponent},
+  {path: 'search-details',component:ToggleComponent},
+  {path:'',redirectTo:'/search-details',pathMatch:'full'}
+];
+
 @NgModule({
   declarations: [
     AppComponent,
