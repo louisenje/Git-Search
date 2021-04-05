@@ -7,6 +7,8 @@ import { UserDetailsComponent } from './user-details/user-details.component';
 import { ToggleComponent } from './toggle/toggle.component';
 import { UserDetDirective } from './user-det.directive';
 import { DateCountPipe } from './date-count.pipe';
+import{ ServiceRequestService } from './service-http/service-request.service'
+import { RouterModule,Routes } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -19,9 +21,10 @@ import { DateCountPipe } from './date-count.pipe';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [ServiceRequestService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
