@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { User } from '../classes/user';
 import { Repo } from '../classes/repo';
-import { environment } from '../../environments/environment'
+import { environment } from '../../environments/environment';
 import { HttpClient } from '@angular/common/http'
+
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +21,8 @@ export class ServiceRequestService {
     this.user = new User ('', '', '', '', 0, 0, 0);
     this.repo = new Repo('', '', '');
     this.userName = 'loui';
-   } 
+   }
+
    getUser() {
 
     interface ApiResponse {
@@ -77,4 +79,3 @@ export class ServiceRequestService {
   }
 
 }
- 

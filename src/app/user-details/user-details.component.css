@@ -1,4 +1,5 @@
-
+@import url('https://fonts.googleapis.com/css?family=Black+And+White+Picture&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Black+And+White+Picture|Yesteryear&display=swap");
 .search-class p{
     display: inline-block;
     padding: 2%;
@@ -88,9 +89,4 @@ button:hover::after{
 }
 .prof-btn{
     margin-top: 1%;
-}
-h4{
-color: aliceblue;
-padding-bottom: 50px;
-padding-top: 20px;
 }
