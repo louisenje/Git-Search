@@ -7,7 +7,7 @@ import { UserDetailsComponent } from './user-details/user-details.component';
 import { ToggleComponent } from './toggle/toggle.component';
 import { UserDetDirective } from './user-det.directive';
 import { DateCountPipe } from './date-count.pipe';
-import{ ServiceRequestService } from './service-http/service-request.service'
+import{ ServiceRequestService } from './service-http/service-request.service';
 import { RouterModule,Routes } from '@angular/router';
 
 const routes:Routes =[

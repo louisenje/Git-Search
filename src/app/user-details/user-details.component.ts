@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../../classes/user'
-import { Repo } from '../../classes/repo'
-import { ServiceRequestService } from '../../service-http/service-request.service'
+import { User } from '../classes/user';
+import { Repo } from '../classes/repo';
+import{ ServiceRequestService } from '../service-http/service-request.service';
 
 
 
