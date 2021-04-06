@@ -1,13 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Black+And+White+Picture&display=swap');
-@import url("https://fonts.googleapis.com/css?family=Black+And+White+Picture|Yesteryear&display=swap");
+
 .search-class p{
     display: inline-block;
     padding: 2%;
     font-size: 20px;
-    font-family: 'Yesteryear', cursive; 
+  
 }
 *{
-    font-family: 'Black And White Picture', sans-serif;
+    
     box-sizing: border-box;
     transition: all 0.5s ease-in-out;
 }
@@ -89,4 +88,9 @@ button:hover::after{
 }
 .prof-btn{
     margin-top: 1%;
+}
+h4{
+color: aliceblue;
+padding-bottom: 50px;
+padding-top: 20px;
 }

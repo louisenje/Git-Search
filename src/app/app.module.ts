@@ -9,6 +9,7 @@ import { UserDetDirective } from './user-det.directive';
 import { DateCountPipe } from './date-count.pipe';
 import{ ServiceRequestService } from './service-http/service-request.service';
 import { RouterModule,Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes:Routes =[
   {path: 'input-name',component:UserDetailsComponent},
@@ -28,6 +29,7 @@ const routes:Routes =[
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     RouterModule.forRoot(routes)
   ],
   providers: [ServiceRequestService],
