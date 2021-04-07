@@ -33,7 +33,7 @@ export class ServiceRequestService {
       following: number;
     }
     const promise = new Promise(((resolve, reject) => {
-      this.http.get<ApiResponse>( `https://api.github.com/users/${this.userName}?access_token=${this.apiKey}` )
+      this.http.get<ApiResponse>('https://api.github.com/users/' + this.userName + '?access_token=' + this.apiKey )
       .toPromise()
       .then(res => {
           this.user.login = res.login;
@@ -61,7 +61,7 @@ export class ServiceRequestService {
     }
 
     const promise = new Promise(((resolve, reject) => {
-      this.http.get<ApiResponse>( `https://api.github.com/users/${this.userName}?access_token=${this.apiKey}` )
+      this.http.get<ApiResponse>('https://api.github.com/users/' + this.userName + '/repos?access_token=' + this.apiKey )
         .toPromise()
         .then(res => {
           this.repo = res;
