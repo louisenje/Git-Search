@@ -4,12 +4,12 @@
 
 export const environment = {
   production: false,
-  apiKey:'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',
+  apiKey:' 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',
   baseUrl:''
 };
 
 
-/*
+/*Api= "a746b62e5db077d41d84600a3fa6df484f1d8579"
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
  *

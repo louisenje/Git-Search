@@ -2,12 +2,10 @@ import { Injectable } from '@angular/core';
 import { User } from '../classes/user';
 import { Repo } from '../classes/repo';
 import { environment } from '../../environments/environment';
-import { HttpClient } from '@angular/common/http'
+import { HttpClient } from '@angular/common/http';
 
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class ServiceRequestService {
 
   user:User;
@@ -35,7 +33,7 @@ export class ServiceRequestService {
       following: number;
     }
     const promise = new Promise(((resolve, reject) => {
-      this.http.get<ApiResponse>('https://api.github.com/users/' + this.userName + '?access_token=' + this.apiKey )
+      this.http.get<ApiResponse>( `https://api.github.com/users/${this.userName}?access_token=${this.apiKey}` )
       .toPromise()
       .then(res => {
           this.user.login = res.login;
@@ -63,7 +61,7 @@ export class ServiceRequestService {
     }
 
     const promise = new Promise(((resolve, reject) => {
-      this.http.get<ApiResponse>('https://api.github.com/users/' + this.userName + '/repos?access_token=' + this.apiKey )
+      this.http.get<ApiResponse>( `https://api.github.com/users/${this.userName}?access_token=${this.apiKey}` )
         .toPromise()
         .then(res => {
           this.repo = res;
